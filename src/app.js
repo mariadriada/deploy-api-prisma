@@ -6,6 +6,10 @@ import gestorProjectRouter from "./routes/gestorproject.route.js";
 const app = express();
 const PORT = process.env.PORT
 
+app.get('/', (req, res)=>{
+  res.json({messgae: "Hello API prisma"})
+})
+
 // Middleware
 app.use(express.json());
 app.use("/gestor", gestorRoutes);
